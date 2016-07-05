@@ -22,6 +22,7 @@ public class Main {
         while (!response){
             int okPosition = 0;
             int okColor = 0;
+            ArrayList<Integer> colorsChoosenCopy = new ArrayList<>(colorsChoosen);
             Scanner sc = new Scanner(System.in);
             System.out.print(" ");
             System.out.println("Veuillez saisir une combinaison de 5 couleurs (première lettre) :");
@@ -34,8 +35,12 @@ public class Main {
                 color = EnumColor.Color.getNumberColor((""+str.charAt(i)));
                 if (color == colorsChoosen.get(i)){
                     okPosition++;
+                    colorsChoosenCopy.set(i, -1);
                 }
-                else if (colorsChoosen.indexOf(color)!=i && colorsChoosen.indexOf(color)!=-1){
+            }
+            for (int i=0;i<5;i++){
+                int color = EnumColor.Color.getNumberColor((""+str.charAt(i)));
+                if (colorsChoosenCopy.indexOf(color)!=-1){
                     okColor++;
                 }
             }
