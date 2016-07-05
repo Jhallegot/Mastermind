@@ -19,14 +19,14 @@ public class Main {
             System.out.print(EnumColor.Color.getNameColor(color)+" ");
         }
 
-        while (response == false){
+        while (!response){
             int okPosition = 0;
             int okColor = 0;
             Scanner sc = new Scanner(System.in);
             System.out.print(" ");
             System.out.println("Veuillez saisir une combinaison de 5 couleurs (première lettre) :");
             String str = sc.nextLine();
-            str.toUpperCase();
+            str = str.toUpperCase();
             System.out.println("Vous avez saisi : " + str);
 
             for (int i=0;i<5;i++){
