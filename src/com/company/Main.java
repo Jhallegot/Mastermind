@@ -39,7 +39,7 @@ public class Main {
                     colorsChoosenCopy.set(i, -1);
                 }
             }
-            //search color match
+            //search color match 
             for (int i=0;i<5;i++){
                 int color = EnumColor.Color.getNumberColor((""+str.charAt(i)));
                 if (colorsChoosenCopy.indexOf(color)!=-1){
