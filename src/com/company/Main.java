@@ -30,6 +30,7 @@ public class Main {
             str = str.toUpperCase();
             System.out.println("Vous avez saisi : " + str);
 
+            //search perfect match
             for (int i=0;i<5;i++){
                 int color;
                 color = EnumColor.Color.getNumberColor((""+str.charAt(i)));
@@ -38,6 +39,7 @@ public class Main {
                     colorsChoosenCopy.set(i, -1);
                 }
             }
+            //search color match
             for (int i=0;i<5;i++){
                 int color = EnumColor.Color.getNumberColor((""+str.charAt(i)));
                 if (colorsChoosenCopy.indexOf(color)!=-1){
